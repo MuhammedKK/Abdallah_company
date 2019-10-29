@@ -1,0 +1,34 @@
+/* Start navbar section */
+
+.navbar {
+    background:transparent;
+    border:none;
+    padding-top:10px;
+    .navbar-header {
+        .navbar-brand  {
+            width: 200px;
+            height: auto;
+            padding: 0;
+            img {
+                width: 100px;
+                margin:-14px auto 0;
+                margin-left: 0;
+            }
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            padding-top: 5px;
+            li {
+                a {
+                    color:#fff;
+                    font-size: 20px;
+                    &:hover, &:focus {
+                        color:$main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+/* end navbar section */

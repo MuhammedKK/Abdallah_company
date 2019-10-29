@@ -1,0 +1,42 @@
+/* Start General Rules */
+
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+
+
+.middle-line{
+    position: relative;
+    margin-bottom:40px;
+    &:before {
+        content:'';
+        position: absolute;
+        width: 55px;
+        top: 50px;
+        left: calc(50% - 27.5px);
+        background-color: $main-color;
+        height: 3px;
+    }
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.col-md-2 {
+    img {
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+}
+
+/* End General Rules */

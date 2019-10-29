@@ -1,0 +1,312 @@
+/* Start Loading Page */
+
+.spinner-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $sub-color;
+    z-index: 9999;
+    .spinner {
+        width: 60px;
+        height: 60px;   
+        background-color: $main-color;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%);
+        margin:auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+        @media (max-width:767px) {
+            left:43%;
+        }
+    }
+}
+
+  @-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+  @-moz-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+  
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+/* End Loading Page */
+
+
+/* Start Header Section */
+header {
+    position: relative;
+    overflow: hidden;
+    min-height:660px;
+    .overlay {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.8);
+        .header-content {
+            color:#fff;
+            h1 {
+                margin-top:70px;
+                font-size:40px;
+                line-height:1.8;
+                @media(max-width:767px) {
+                    font-size:25px;
+                } 
+                span {
+                    color:$main-color;
+                }
+            }
+            a {
+                display: inline-block;
+                width: 200px;
+                background-color: $main-color;
+                color: #fff;
+                padding: 10px;
+                border: 1px solid $main-color;
+                border-radius: 30px;
+                transition:all .3s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                    background-color:$main-color;
+                }
+            }
+        }
+    }
+    .fullBackground {
+        background-position:center center;
+        background-attachment:fixed;
+        background-size: cover;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:-1
+    }
+    .fa-chevron-down {
+        color: #fff;
+        position: absolute;
+        bottom: 5%;
+        transform: translate(-50%);
+        border: 2px solid #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        left:50%;
+        cursor: pointer;
+        transition:all .5s ease-in-out;
+        &:hover {
+            background-color:$main-color;
+            border:2px solid $main-color;
+        }
+    }
+
+}
+
+
+/* End Header Section */
+
+/* Start about section */
+.about {
+    margin:30px 0;
+    padding:30px 0;
+    H2 {
+        margin-top:40px;  
+    }
+    .about-content {
+        .about-img {
+            overflow: hidden;
+            margin-bottom:30px;
+            img {
+                max-width: 70%;
+                margin: -27px auto;
+                display: block;
+            }
+        }
+        .about-desc {
+            
+            h3 {
+                margin-top:0;
+                color:$main-color;
+                margin-bottom:30px;
+            }
+            p {
+                color:$sub-color;
+                font-size:18px;
+                line-height:1.9;
+            }
+        }
+    }
+
+}
+/* End about section */
+
+/* Start analysis section */
+
+.analysis {
+    h2 {
+        margin-top:70px;
+    }
+    .carusal-img {
+        background-color: #fff;
+        margin-right: 25px;
+        padding: 40px 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        margin-bottom:30px;
+        box-shadow: 1px 1px 1px #ddd;
+        img {
+            max-width: 100%;
+        }
+    }
+    .carusal-content {
+        h3 {
+            margin-top:0;
+            color:$main-color;
+            margin-bottom:20px;
+        }
+        p {
+            color:$sub-color;
+            font-size:19px;
+            line-height: 1.9;
+        }
+    }
+}
+
+/* End analysis section */
+
+/* Start Stats Section */
+.service {
+    padding:80px 0;
+    .itmes-content {
+        display: flex;
+        justify-content:space-between;
+        margin-bottom:20px;
+        img {
+            flex:1;
+            width:calc(100% / 3);
+            margin:3px;
+        }
+    }
+}
+/* End Stats Section */
+
+/* Start Testimonials Section */
+
+.testi {
+    padding:40px 0;
+    .slider-box {
+        background:url('../imgs/testi.jpg') no-repeat fixed;
+        background-size:cover;
+        .overlay {
+            background-color:rgba(0, 0, 0, .5);
+            .slider {
+                color:#fff;
+                > div {
+                    display:none;
+                }
+                .active {
+                    display: block;
+                    img {
+                        max-width: 100px;
+                        margin-bottom: 20px;
+                        border-radius:50%;
+                    }
+                    p {
+                        font-size:20px;
+                        font-weight: bold;
+                        color:$main-color;
+                    }
+                    q {
+                        font-size:17px;
+                        line-height:1.8;
+                        margin-bottom:55px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Testimonials Section */
+
+/* Start Contact Us Section */
+.contact {
+    padding:60px 0;
+    .contact-content {
+        form {
+            input {
+                border-radius: 30px;
+                margin-bottom: 20px;
+                padding:15px
+            }
+            input[type="submit"] {
+                width: 190px;
+                padding: 15px;
+                border: none;
+                background:$main-color;
+                color:#fff;
+            }
+            textarea {
+                margin-bottom:20px;
+            }
+        }
+        .social {
+            h3 {
+                margin-top:0;
+                margin-bottom: 30px;
+            }
+            ul {
+                padding:0;
+                li {
+                    display: inline-block;
+                    margin:5px;
+                    a {
+                        color:#fff;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 20px;
+                        border-radius: 50%;
+                    }
+                    .fa-facebook {
+                        background-color:#3b5998;
+                        border: 1px solid #3b5998;
+                    }
+                    .fa-twitter {
+                        background-color:#1da1f2;
+                        border: 1px solid #1da1f2;
+                    }
+                    .fa-instagram {
+                        background-color:#c13584;
+                        border: 1px solid #c13584;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Contact Us Section */
