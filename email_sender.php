@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
     $phone = $_POST['phone'];
     $Msg = $_POST['message'];
 
-    $to = 'khaloood2281999@gmail.com';
+    $to = 'Malmalki@almalki-trade.sa';
     $subject = 'Form Submission';
     $message = 'Name' . $name '\n' . 'Phone' . $phone . '\n' . 'Write The Following :' . '\n\n' $Msg;
     $header = 'From' . $email;
